@@ -15,7 +15,7 @@ class WeatherScaper:
         
     def get_data(self):
         list_of_data_scaped = []
-        for version in range(1,2+1):
+        for version in range(1,MAX_NWS_VERSION+1):
             list_of_data_scaped.append(pd.DataFrame(scrape_nws_climate(version=version), index=[version]))
         return pd.concat(list_of_data_scaped)
                 

@@ -1,5 +1,5 @@
 [project]
-name = "weather-scaper"
+name = "weather-scraper"
 version = "0.1.0"
 description = "Scraping weather data from nws"
 authors = [

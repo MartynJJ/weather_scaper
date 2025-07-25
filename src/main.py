@@ -1,4 +1,4 @@
-from weather_scaper import MAX_NWS_VERSION, scrape_nws_climate
+from weather_scraper import MAX_NWS_VERSION, scrape_nws_climate
 
 from datetime import datetime, date
 import pandas as pd
@@ -7,7 +7,7 @@ from typing import Optional
 
 DEFAULT_OUTPUT_PATH = Path('data/')
 
-class WeatherScaper:
+class WeatherScraper:
     def __init__(self, output_path: Path = DEFAULT_OUTPUT_PATH, scrape_date: Optional[date] = None) -> None:
         self._output_path = output_path
         self._date = scrape_date or datetime.today().date()
@@ -42,10 +42,10 @@ class WeatherScaper:
         self.save_data(self._data)
 
 def main() -> None:
-    weather_scaper = WeatherScaper()
-    weather_scaper.run()
-    if weather_scaper._data is not None and not weather_scaper._data.empty:
-        first_row = weather_scaper._data.iloc[0]
+    weather_scraper = WeatherScraper()
+    weather_scraper.run()
+    if weather_scraper._data is not None and not weather_scraper._data.empty:
+        first_row = weather_scraper._data.iloc[0]
         print(f"Last Data: TMAX: {first_row.get('TMAX', 'N/A')} TMIN: {first_row.get('TMIN', 'N/A')}")
     else:
         print("Last Data: No data to display.")

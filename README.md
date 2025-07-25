@@ -1,5 +1,5 @@
 # Weather Scraper
-Quick script for scraping and parsing weather data. Format is a table that contains a superset of columns avaliable from historic ncdc data (https://www.ncdc.noaa.gov/cdo-web/cart).
+Quick script for scraping and parsing weather data. Format is a table that contains a superset of columns avaliable from historic ncdc data (https://www.ncei.noaa.gov/).
 NCDC currently provides a lagged historic data set so this will allow complete T-1 data when used together. 
 
 ## Setup
